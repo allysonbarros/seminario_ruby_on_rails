@@ -1,0 +1,53 @@
+* {margin:0; padding:0;}
+body { font-family:"Bradley Hand ITC TT";}
+#geral {padding-top:30px; width:720px; margin:0 auto;}
+#geral #conteudo {min-height:200px; padding-top:70px; padding-bottom:20px; background:#FFF url("../images/bg-arrame.jpg") left top repeat-x;}
+.linha {width:700px; margin:0 auto; height:20px; padding-top:8px; padding-left:15px; padding-bottom:5px; border-bottom:2px solid #CDEAEE; overflow:hidden;}
+.linha:first-child {padding-top:0; height:28px;}
+.linha:first-child .botao-inserir {margin-right:15px;}
+.linha p a {widht:100%; display:block; text-decoration:none; color:#000;}
+.linha p a:hover {color:blue; font-weight:bold; background:url("../images/lupa.gif") top right no-repeat;}
+.titulo {font-size:25px; float:left;}
+.botao-inserir {float:right; vertical-align:bottom; padding-top:10px;}
+.botao-inserir a, .btn-submit a, a {color:#CC0000; font-weight:bold; text-decoration:none;}
+.btn-submit a {margin-left:15px;}
+.duas-colunas {overflow:hidden;}
+.duas-colunas .esq {float:left; width:100px;}
+.duas-colunas .dir {float:left;}
+.duas-colunas .dir input[type="text"] {width:300px; background:none; border:none; border-bottom:2px dotted #000;}
+.btn-submit {padding-top:20px; text-align:right; margin-right:30px;}
+.field_with_errors { display: inline; float:left; }
+
+.mensagem_erro {margin:10px 0px; padding:10px; background-color:#F2DEDE; border-radius:4px; border-color:#EED3D7; color:#B94A48;}
+.mensagem_erro h2 {font-size:20px;}
+.mensagem_erro ul {list-style-position:inside; margin:10px;}
+
+.flickr_pagination {
+text-align: center;
+padding: 0.3em;
+cursor: default; }
+.flickr_pagination a, .flickr_pagination span, .flickr_pagination em {
+padding: 0.2em 0.5em; }
+.flickr_pagination .disabled {
+color: #aaaaaa; }
+.flickr_pagination .current {
+font-style: normal;
+font-weight: bold;
+color: #ff0084; }
+.flickr_pagination a {
+border: 1px solid #dddddd;
+color: #0063dc;
+text-decoration: none; }
+.flickr_pagination a:hover, .flickr_pagination a:focus {
+border-color: #003366;
+background: #0063dc;
+color: white; }
+.flickr_pagination .page_info {
+color: #aaaaaa;
+padding-top: 0.8em; }
+.flickr_pagination .previous_page, .flickr_pagination .next_page {
+border-width: 2px; }
+.flickr_pagination .previous_page {
+margin-right: 1em; }
+.flickr_pagination .next_page {
+margin-left: 1em; }

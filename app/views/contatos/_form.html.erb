@@ -1,0 +1,84 @@
+<% content_for :mensagem_erro do -%>
+	<% if @contato.errors.any? %>
+	<div class="linha" style="height:auto; overflow:hidden;">
+		<div class="mensagem_erro">
+	    <h2>Atenção: Você deve preencher os campos corretamente.</h2>
+
+	    <ul>
+	    <% @contato.errors.full_messages.each do |msg| %>
+	      <li><%= msg %></li>
+	    <% end %>
+	    </ul>
+	  </div>
+	</div>
+	<% end %>	
+<% end -%>
+
+<%= form_for(@contato) do |f| %>
+	<div class="linha">
+		<div class="duas-colunas">
+			<div class="esq">
+				<%= f.label :nome %>
+			</div>
+			<div class="dir">
+				<%= f.text_field :nome %>
+			</div>
+		</div>
+	</div>
+	
+	<div class="linha">
+		<div class="duas-colunas">
+			<div class="esq">
+				<%= f.label :email %>
+			</div>
+			<div class="dir">
+				<%= f.text_field :email %>
+			</div>
+		</div>
+	</div>
+	
+	<div class="linha">
+		<div class="duas-colunas">
+			<div class="esq">
+				<%= f.label :telefone %>
+			</div>
+			<div class="dir">
+				<%= f.text_field :telefone %>
+			</div>
+		</div>
+	</div>
+	
+	<div class="linha">
+		<div class="duas-colunas">
+			<div class="esq">
+				<%= f.label :twitter %>
+			</div>
+			<div class="dir">
+				<%= f.text_field :twitter %>
+			</div>
+		</div>
+	</div>
+	
+	<div class="linha">
+		<div class="duas-colunas">
+			<div class="esq">
+				<%= f.label :facebook %>
+			</div>
+			<div class="dir">
+				<%= f.text_field :facebook %>
+			</div>
+		</div>
+	</div>
+	
+	<div class="linha">
+	</div>
+	
+	<div style="overflow:hidden; padding:15px;">
+		<div style="float:left;">
+			<%= link_to 'Voltar para a Listagem', contatos_path %>
+		</div>
+		<div style="float:right;">
+			<%= f.submit "Salvar Contato" %>
+		</div>
+	</div>	
+<% end %>

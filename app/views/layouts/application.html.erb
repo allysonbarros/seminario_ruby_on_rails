@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>.: Agenda de Contatos :.</title>
+  <%= stylesheet_link_tag    "application", "http://mislav.uniqpath.com/will_paginate/pagination.css", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<div id="geral">
+		<div id="conteudo">
+			<div class="linha">
+				<div class="titulo">.: Minha Agenda</div>
+				<% if action_name == "index" || action_name == "show" %>
+					<div class="botao-inserir">
+						<%= link_to "+ Incluir Contato", new_contato_path %>
+					</div>
+				<% end %>
+			</div>
+			
+			<%= yield :mensagem_erro %>
+			
+			<div class="linha">	
+			</div>
+			
+			<%= yield %>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<% if @contatos.size == 0 %>
+	<div class="linha">
+		<p>Nenhum Contato cadastrado.</p>
+	</div>
+<% else %>
+	<% @contatos.each do |contato| %>
+		<div class="linha">
+				<p><%= link_to raw("&raquo; ") + contato.nome, contato %></p>
+		</div>
+	<% end %>
+	
+	<div class="linha" style="text-align:right; height:auto;">
+		<div style="float:right;">
+			<%= @contatos.size %> de <%= Contato.count %> Contato(s) em Exibição.
+		</div>
+	</div>
+	
+	<div class="apple_pagination" style="margin-top:20px;">
+			<%= will_paginate @contatos %>
+	</div>
+<% end %>

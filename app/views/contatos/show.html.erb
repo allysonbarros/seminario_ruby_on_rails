@@ -1,0 +1,67 @@
+<p id="notice"><%= notice %></p>
+
+<div class="linha">
+	<div class="duas-colunas">
+		<div class="esq">
+			<p><label for="nome">Nome:</label></p>
+		</div>
+		<div class="dir">
+			<p><%= @contato.nome %></p>
+		</div>
+	</div>
+</div>
+
+<div class="linha">
+	<div class="duas-colunas">
+		<div class="esq">
+			<p><label for="nome">Email:</label></p>
+		</div>
+		<div class="dir">
+			<p><%= @contato.email %></p>
+		</div>
+	</div>
+</div>
+
+<div class="linha">
+	<div class="duas-colunas">
+		<div class="esq">
+			<p><label for="nome">Telefone:</label></p>
+		</div>
+		<div class="dir">
+			<p><%= @contato.telefone %></p>
+		</div>
+	</div>
+</div>
+
+<div class="linha">
+	<div class="duas-colunas">
+		<div class="esq">
+			<p><label for="nome">Twitter:</label></p>
+		</div>
+		<div class="dir">
+			<p><%= @contato.twitter %></p>
+		</div>
+	</div>
+</div>
+
+<div class="linha">
+	<div class="duas-colunas">
+		<div class="esq">
+			<p><label for="nome">Facebook:</label></p>
+		</div>
+		<div class="dir">
+			<p><%= @contato.facebook %></p>
+		</div>
+	</div>
+</div>
+
+<div class="linha">
+</div>
+
+<div class="linha" style="text-align:right;">
+	<div>
+			<%= link_to 'Editar Contato', edit_contato_path(@contato) %> |
+			<%= link_to 'Deletar Contato', @contato, :method => "delete", :confirm => "Deseja realmente excluir este contato?" %> | 
+			<%= link_to 'Voltar para a Listagem de Contatos', contatos_path %>
+	</div>
+</div>
